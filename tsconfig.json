@@ -28,7 +28,7 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts", "src/components/Square.tsx"
   ],
   "exclude": [
     "node_modules"
