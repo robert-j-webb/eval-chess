@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 
-const port: number = parseInt(process.env.port || '', 10) || 4000;
+const port: number = parseInt(process.env.port || '', 10) || 3001;
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
