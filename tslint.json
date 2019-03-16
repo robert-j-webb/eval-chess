@@ -1,0 +1,15 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "trailing-comma": [true],
+    "no-console": [false],
+    "prettier": [true, { "singleQuote": true }],
+    "only-arrow-functions": false
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "rulesDirectory": ["tslint-plugin-prettier"]
+}
