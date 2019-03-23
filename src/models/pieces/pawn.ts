@@ -1,18 +1,14 @@
 import Piece from './piece';
 
 export default class Pawn extends Piece {
-  public initialPositions: number[][];
-  constructor(player) {
-    super(
-      player,
-      player === 1
-        ? 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg'
-        : 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg'
-    );
-    this.initialPositions = [
-      [48, 49, 50, 51, 52, 53, 54, 55],
-      [8, 9, 10, 11, 12, 13, 14, 15]
-    ];
+  public initialPositions: number[][] = [
+    [48, 49, 50, 51, 52, 53, 54, 55],
+    [8, 9, 10, 11, 12, 13, 14, 15]
+  ];
+  public getIconUrl() {
+    return this.player === 1
+      ? 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg'
+      : 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg';
   }
 
   public isMovePossible(src, dest, isDestEnemyOccupied) {

@@ -1,11 +1,13 @@
 export default class Piece {
   public player: number;
   public style: { backgroundImage: string; backgroundColor?: string };
-  constructor(player, iconUrl) {
+  public idx: number;
+  constructor(player, idx: number) {
     this.player = player;
     this.style = {
-      backgroundImage: "url('" + iconUrl + "')"
+      backgroundImage: "url('" + this.getIconUrl() + "')"
     };
+    this.idx = idx;
   }
   public getSrcToDestPath(src: number, dest: number): number[] {
     return [];
@@ -16,6 +18,10 @@ export default class Piece {
     isDestEnemyOccupied?: boolean
   ): boolean {
     return false;
+  }
+
+  public getIconUrl(): string {
+    return '';
   }
 
   public clone(): Piece {

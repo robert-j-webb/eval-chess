@@ -1,15 +1,11 @@
 import Piece from './piece';
 
 export default class Rook extends Piece {
-  constructor(player) {
-    super(
-      player,
-      player === 1
-        ? 'https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg'
-        : 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg'
-    );
+  public getIconUrl() {
+    return this.player === 1
+      ? 'https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg'
+      : 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg';
   }
-
   public isMovePossible(src, dest) {
     const mod = src % 8;
     const diff = 8 - mod;

@@ -11,9 +11,12 @@ export default function Square(props: {
 }) {
   return (
     <button
-      data-testid={props.piece && props.piece.constructor.name}
+      data-testid={
+        props.piece && props.piece.constructor.name + props.piece.idx
+      }
       className={
-        'square ' + (props.shade === Color.white ? 'light-square' : 'dark-square')
+        'square ' +
+        (props.shade === Color.white ? 'light-square' : 'dark-square')
       }
       onClick={props.onClick}
       style={props.style}
