@@ -63,3 +63,5 @@ typings/
 server/bin
 
 node_modules/
+
+.DS_store

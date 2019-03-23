@@ -1,16 +1,20 @@
 import React from 'react';
 import '../App.css';
 import Piece from '../models/pieces/piece';
+import Color from '../static/color';
 
 export default function Square(props: {
-  style: { backgroundImage: string; backgroundColor: string };
+  style: { backgroundImage: string; backgroundColor?: string };
   onClick: () => void;
-  shade: string;
-  piece: Piece;
+  shade: Color;
+  piece?: Piece;
 }) {
   return (
     <button
-      className={'square ' + props.shade}
+      data-testid={props.piece && props.piece.constructor.name}
+      className={
+        'square ' + (props.shade === Color.white ? 'light-square' : 'dark-square')
+      }
       onClick={props.onClick}
       style={props.style}
     />

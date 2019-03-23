@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import Piece from '../models/pieces/piece';
 import Color from '../static/color';
-import initialiseChessBoard from '../static/initializeChessBoard';
+import initializeChessBoard from '../static/initializeChessBoard';
 import Board from './Board';
 import FallenSoldierBlock from './FallenSoldiersBlock';
 
@@ -24,7 +24,7 @@ export default class Game extends React.Component {
       blackFallenSoldiers: [],
       player: 1,
       sourceSelection: -1,
-      squares: initialiseChessBoard(),
+      squares: initializeChessBoard(),
       status: '',
       turn: Color.white,
       whiteFallenSoldiers: []

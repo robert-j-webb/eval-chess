@@ -6,7 +6,7 @@ import Piece from '../models/pieces/piece';
 import Queen from '../models/pieces/queen';
 import Rook from '../models/pieces/rook';
 
-export default function initialiseChessBoard(): Piece[] {
+export default function initializeChessBoard(): Piece[] {
   const squares = Array(64).fill(null);
 
   for (let i = 8; i < 16; i++) {

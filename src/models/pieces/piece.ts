@@ -1,11 +1,10 @@
 export default class Piece {
   public player: number;
-  public style: { backgroundImage: string; backgroundColor: string };
+  public style: { backgroundImage: string; backgroundColor?: string };
   constructor(player, iconUrl) {
     this.player = player;
     this.style = {
-      backgroundImage: "url('" + iconUrl + "')",
-      backgroundColor: 'transparent'
+      backgroundImage: "url('" + iconUrl + "')"
     };
   }
   public getSrcToDestPath(src: number, dest: number): number[] {

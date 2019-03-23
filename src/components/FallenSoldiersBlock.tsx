@@ -14,7 +14,7 @@ export default class FallenSoldierBlock extends React.Component {
         piece={square}
         style={square.style}
         onClick={() => null}
-        shade={''}
+        shade={squareShade}
       />
     );
   }
@@ -22,12 +22,12 @@ export default class FallenSoldierBlock extends React.Component {
   public render() {
     return (
       <div>
-        <div className="board-row">
+        <div data-testid="fallen-white-soldiers" className="board-row">
           {this.props.whiteFallenSoldiers.map((ws, index) =>
             this.renderSquare(ws, index, Color.white)
           )}
         </div>
-        <div className="board-row">
+        <div data-testid="fallen-black-soldiers" className="board-row">
           {this.props.blackFallenSoldiers.map((bs, index) =>
             this.renderSquare(bs, index, Color.black)
           )}
