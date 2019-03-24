@@ -157,7 +157,9 @@ export default class Game extends React.Component {
                   this.state.turn === Color.white ? 'white' : 'black'
               }}
             />
-            <div className="game-status">{this.state.status}</div>
+            <div className="game-status" data-testid="status">
+              {this.state.status}
+            </div>
 
             <div className="Fallen-soldier-block">
               {

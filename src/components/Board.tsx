@@ -6,7 +6,7 @@ import Square from './Square';
 
 export default class Board extends React.Component {
   public props: { squares: Piece[]; onClick: (i: number) => void };
-  public renderSquare(i, squareShade) {
+  public renderSquare(i, squareShade, boardPosition: string) {
     return (
       <Square
         key={i}
@@ -14,6 +14,7 @@ export default class Board extends React.Component {
         style={this.props.squares[i] ? this.props.squares[i].style : null}
         shade={squareShade}
         onClick={() => this.props.onClick(i)}
+        boardPosition={boardPosition}
       />
     );
   }
@@ -27,7 +28,13 @@ export default class Board extends React.Component {
           (isEven(i) && isEven(j)) || (!isEven(i) && !isEven(j))
             ? Color.white
             : Color.black;
-        squareRows.push(this.renderSquare(i * 8 + j, squareShade));
+        squareRows.push(
+          this.renderSquare(
+            i * 8 + j,
+            squareShade,
+            String.fromCharCode(64 + j + 1) + (8 - i)
+          )
+        );
       }
       board.push(
         <div key={i} className="board-row">
