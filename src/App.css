@@ -60,11 +60,11 @@ ul {
 
 /*Board color scheme Wheat from http://omgchess.blogspot.com/2015/09/chess-board-color-schemes.html*/
 .dark-square {
-  background-color: RGB(187, 190, 100);
+  background-color: rgb(187, 190, 100);
 }
 
 .light-square {
-  background-color: RGB(234, 240, 206);
+  background-color: rgb(234, 240, 206);
 }
 
 #player-turn-box {

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import Piece from '../models/pieces/piece';
 import Color from '../static/color';
 import Square from './Square';
 
-export default class Board extends React.Component {
+export default class Board extends Component {
   public props: { squares: Piece[]; onClick: (i: number) => void };
   public renderSquare(i, squareShade, boardPosition: string) {
     return (

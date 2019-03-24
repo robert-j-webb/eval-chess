@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import Piece from '../models/pieces/piece';
 import Color from '../static/color';
