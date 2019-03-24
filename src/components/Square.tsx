@@ -10,7 +10,8 @@ export default function Square(props: {
   piece?: Piece;
   boardPosition?: string;
 }) {
-  const pieceId = (props.piece && props.piece.constructor.name + props.piece.idx) || '';
+  const pieceId =
+    (props.piece && props.piece.constructor.name + props.piece.idx) || '';
 
   return (
     <button
